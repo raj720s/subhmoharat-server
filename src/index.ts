@@ -12,7 +12,10 @@ app.use(morgan('dev'))
 
 app.use('/api', rootRouter)
 
+app.get('/', (req: Request, res: Response) => {
 
+    return res.json({ message: 'hello-subhmoharat' })
+})
 
 export const prisma = new PrismaClient({
     log: ["query"]
